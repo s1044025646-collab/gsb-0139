@@ -1,0 +1,21 @@
+{
+  "name": "array-pattern-eval",
+  "version": "1.0.0",
+  "description": "Windows-local backend for 1-D isotropic-element linear antenna array factor pattern and beam weight evaluation (API + CLI + fixtures + tests). No web UI, no RF transmission, no real devices.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite --no-warnings src/api/server.ts",
+    "cli": "node --experimental-sqlite --no-warnings src/cli/cli.ts",
+    "test": "node --experimental-sqlite --no-warnings --test test/core.test.ts test/db.test.ts test/integration/api.test.ts test/integration/e2e.test.ts",
+    "demo": "node --experimental-sqlite --no-warnings scripts/demo.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
