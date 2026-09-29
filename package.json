@@ -1,0 +1,27 @@
+{
+  "name": "antenna-array-backend",
+  "version": "1.0.0",
+  "description": "Local 1-D isotropic linear array pattern and beam-weight evaluation backend (API + CLI + fixtures + tests). No RF transmission, no real devices.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --experimental-sqlite --no-warnings src/server.ts",
+    "demo": "node --experimental-sqlite --no-warnings scripts/demo.ts",
+    "cli": "node --experimental-sqlite --no-warnings src/cli.ts",
+    "test": "node --experimental-sqlite --no-warnings --test test/*.test.ts"
+  },
+  "keywords": [
+    "antenna-array",
+    "beamforming",
+    "array-factor",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  }
+}
